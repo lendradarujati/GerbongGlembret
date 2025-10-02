@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GerbongGlembret - Garage & Lounge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="photoModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="modalImage" src="" alt="Foto Besar Anggota">
+        <div id="caption"></div>
+    </div>
+
+    <header>
+    <div class="logo">
+        <img src="img/LogoGG.PNG" alt="Logo GerbongGlembret" class="header-logo">
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="#tentang">Tentang Kami</a></a></li>
+            <li><a href="#anggota">Anggota Inti</a></li>
+            <li><a href="#galeri">Galeri Momen</a></li>
+            <li><a href="#jadwal">Jadwal Aksi</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+
+        <section id="tentang" class="hero theme-bg">
+            <h1>Welcome to GerbongGlembret's Basecamp!</h1>
+            <p>Lima sekawan yang bercita-cita lulus dengan penghargaan Cumlaude! Penerjang Banjir! Penyetir Handal! Penyodok Handal!</p>
+        </section>
+
+        <section id="anggota" class="container">
+            <h2>👤 Anggota GerbongGlembret</h2>
+            <div class="member-grid">
+                
+                <div class="member-card">
+                    <h3>Yezi</h3>
+                    <img src="img/Yezi.JPG" alt="Foto Yezi" class="member-photo">
+                    <p><i>Admin yang suka nalangin</i></p>
+                </div>
+                
+                <div class="member-card">
+                    <h3>Shafwan</h3>
+                    <img src="img/Safwan.JPG" alt="Foto Shafwan" class="member-photo">
+                    <p><i>Admin pengemudi Sirion</i></p>
+                </div>
+                
+                <div class="member-card">
+                    <h3>Lendra</h3>
+                    <img src="img/Lendra.JPG" alt="Foto Lendra" class="member-photo">
+                    <p><i>Admin Live Tiktok</i></p>
+                </div>
+                
+                <div class="member-card">
+                    <h3>Deren</h3>
+                    <img src="img/Deren.JPG" alt="Foto Deren" class="member-photo">
+                    <p><i>Admin Story Tiktok</i></p>
+                </div>
+                
+                <div class="member-card">
+                    <h3>Sakha</h3>
+                    <img src="img/Sakha.JPG" alt="Foto Sakha" class="member-photo">
+                    <p><i>Admin DM Tiktok</i></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="container dark-bg">
+            <h2>Galeri GG</h2>
+            <div class="gallery-grid">
+                
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/Aly.JPG" data-caption="GG twtw with kak Aly" alt="Momen 1">
+                </div>
+                
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/Pari.JPG" data-caption="GG goes to Pulau Pari" alt="Momen 2">
+                </div>
+                
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/Vila.JPG" data-caption="GG goes to Bali" alt="Momen 3">
+                </div>
+                
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/JMUN3.JPG" data-caption="GG with EVENTS at JMUN 2025 day 3" alt="Momen 4">
+                </div>
+                
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/JMUN2.JPG" data-caption="GG going on with JMUN 2025 day 2" alt="Momen 5">
+                </div>
+		
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/JMUN1.JPG" data-caption="GG First day accomplished JMUN 2025" alt="Momen 6">
+                </div>
+		
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/bultang.JPG" data-caption="GG after badminton" alt="Momen 7">
+                </div>
+		
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/AEON.JPG" data-caption="GG goes to AEON Mall Tanjung Barat" alt="Momen 8">
+                </div>
+		
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/BL.JPG" data-caption="GG with the Sticks and 8 ball" alt="Momen 9">
+                </div>
+		
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/Badminton.JPG" data-caption="GG with FIA badminton athlete" alt="Momen 10">
+                </div>
+		
+                <div class="photo-item">
+                    <img class="clickable-photo" src="img/kebogor.JPG" data-caption="GG goes to Bogor" alt="Momen 11">
+                </div>
+
+            </div>
+            <p style="margin-top: 20px;"> </p>
+        </section>
+
+        <section id="jadwal" class="container">
+            <h2>Jadwal Kelas GG</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Jam</th>
+                        <th>Mata Kuliah</th>
+                        <th>Ruang (Gedung Baru FIA)</th>
+                        <th>Mahasiswa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="6">**Senin**</td>
+                        <td>08.00 - 10.25</td>
+                        <td>Teori Organisasi</td>
+                        <td>R-601</td>
+                        <td>Nando</td>
+                    </tr>
+                    <tr>
+                        <td>08.00 - 10.25</td>
+                        <td>Keuangan Negara</td>
+                        <td>R-604</td>
+                        <td>Yezi dan Sakha</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Keuangan Negara</td>
+                        <td>R-702</td>
+                        <td>Nando</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Teori Organisasi</td>
+                        <td>R-604</td>
+                        <td>Lendra</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Teori Organisasi</td>
+                        <td>R-605</td>
+                        <td>Shafwan</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Teori Organisasi</td>
+                        <td>R-603</td>
+                        <td>Yezi dan Sakha</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="6">**Selasa**</td>
+                        <td>08.00 - 10.25</td>
+                        <td>Keuangan Negara</td>
+                        <td>R-605</td>
+                        <td>Lendra</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Birokrasi dan Governansi Publik</td>
+                        <td>R-603</td>
+                        <td>Lendra</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Keuangan Negara</td>
+                        <td>R-606</td>
+                        <td>Shafwan</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Birokrasi dan Governansi Publik</td>
+                        <td>R-601</td>
+                        <td>Nando</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Birokrasi dan Governansi Publik</td>
+                        <td>R-602</td>
+                        <td>Yezi dan Sakha</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Birokrasi dan Governansi Publik</td>
+                        <td>R-604</td>
+                        <td>Shafwan</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="8">**Rabu**</td>
+                        <td>08.00 - 10.25</td>
+                        <td>Perilaku Administrasi</td>
+                        <td>R-704</td>
+                        <td>Yezi dan Sakha</td>
+                    </tr>
+                    <tr>
+                        <td>08.00 - 10.25</td>
+                        <td>Perilaku Administrasi</td>
+                        <td>R-806</td>
+                        <td>Lendra</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Perilaku Administrasi</td>
+                        <td>R-804</td>
+                        <td>Nando</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Negara dan Pasar</td>
+                        <td>R-606</td>
+                        <td>Yezi dan Sakha</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Negara dan Pasar</td>
+                        <td>R-602</td>
+                        <td>Lendra</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Perilaku Administrasi</td>
+                        <td>G-203</td>
+                        <td>Shafwan</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Negara dan Pasar</td>
+                        <td>R-605</td>
+                        <td>Nando</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Negara dan Pasar</td>
+                        <td>M-103</td>
+                        <td>Shafwan</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="8">**Kamis**</td>
+                        <td>08.00 - 10.25</td>
+                        <td>Pengantar Kebijakan Publik</td>
+                        <td>R-606</td>
+                        <td>Yezi dan Sakha</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Kepemimpinan dalam Sektor Publik</td>
+                        <td>R-702</td>
+                        <td>Nando</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Kepemimpinan dalam Sektor Publik</td>
+                        <td>R-806</td>
+                        <td>Yezi dan Sakha</td>
+                    </tr>
+                    <tr>
+                        <td>10.30 - 13.00</td>
+                        <td>Pengantar Kebijakan Publik</td>
+                        <td>R-606</td>
+                        <td>Lendra</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Pengantar Kebijakan Publik</td>
+                        <td>R-703</td>
+                        <td>Shafwan</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Kepemimpinan dalam Sektor Publik</td>
+                        <td>R-602</td>
+                        <td>Nando</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Pengantar Kebijakan Publik</td>
+                        <td>R-603</td>
+                        <td>Lendra</td>
+                    </tr>
+                    <tr>
+                        <td>13.30 - 15.55</td>
+                        <td>Kepemimpinan dalam Sektor Publik</td>
+                        <td>R-604</td>
+                        <td>Shafwan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer id="kontak">
+        <h3>Hubungi Kami</h3>
+        <p>Email: penumpangsirion@gmail.com</p>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@gerbongglembret24?_t=ZS-90Cw1gotxuj&_r=1">Tiktok Kami</a> |
+            <a href="#">Grup Diskusi</a> |
+            <a href="https://tk.tokopedia.com/ZSAJjtFKj/">Business</a>
+        </div>
+        <p>&copy; 2025 GerbongGlembret. Supported by Enjid.</p>
+    </footer>
+
+    <script>
+        const modal = document.getElementById("photoModal");
+        const modalImg = document.getElementById("modalImage");
+        const captionText = document.getElementById("caption");
+        const closeBtn = document.getElementsByClassName("close-btn")[0];
+        const clickablePhotos = document.querySelectorAll(".clickable-photo");
+
+        clickablePhotos.forEach(img => {
+            img.onclick = function(){
+                modal.style.display = "block";
+                // Menggunakan atribut src dari gambar yang diklik untuk modal
+                modalImg.src = this.src; 
+                captionText.innerHTML = this.getAttribute("data-caption");
+                document.body.classList.add('modal-open');
+            }
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                document.body.classList.remove('modal-open');
+            }
+        }
+    </script>
+
+</body>
+</html>

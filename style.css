@@ -1,0 +1,295 @@
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: filter 0.3s ease;
+}
+
+/* --- THEMA COLOR PALETTE --- */
+.theme-dark { background: #154332; color: #f4f4f4; }
+.theme-accent { color: #FF4500; }
+.theme-metal { background: #34495E; color: #f4f4f4; }
+
+
+/* --- EFEK BLUR UNTUK BODY KETIKA MODAL AKTIF --- */
+.modal-open > *:not(.modal) {
+    filter: blur(5px);
+}
+
+/* --- HEADER & NAVIGASI (Tema Metal) --- */
+header {
+    background: #34495E;
+    color: #fff;
+    /* PADDING RAMPING */
+    padding: 0.1rem 2rem; 
+    
+    /* POSISI KIRI-KANAN */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    /* Wadah logo tetap di kiri */
+}
+
+.header-logo {
+    /* UKURAN LOGO BESAR 130px */
+    height: 150px; 
+    width: auto;
+    display: block;
+    
+    /* MARGIN NEGATIF UNTUK MEMASUKKAN LOGO BESAR KE HEADER RAMPING */
+    margin-top: -70px; 
+    margin-bottom: -70px;
+}
+
+nav ul { 
+    list-style: none; 
+    display: flex; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover { background: #4a667f; }
+
+/* --- SEKSI UMUM & CONTAINER --- */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+h1, h2 { margin-bottom: 1rem; color: #34495E; }
+h2 { 
+    border-bottom: 3px solid #FF4500;
+    padding-bottom: 10px; 
+    display: inline-block; 
+}
+
+/* Seksi Hero (Tentang Kami) - Tema Hijau Gelap Biliar */
+.hero {
+    background: #154332;
+    color: #f4f4f4;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+.hero h1 { color: #FF4500; }
+
+/* --- PROFIL ANGGOTA --- */
+.member-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.member-card {
+    background: #ECF0F1;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    min-width: 180px;
+    max-width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card h3 {
+    color: #34495E;
+    margin-bottom: 10px;
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    display: block;
+    border-radius: 50%; /* FOTO PROFIL BULAT */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #FF4500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.member-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+/* --- GALERI FOTO --- */
+.dark-bg { background: #ecf0f1; }
+
+.gallery-grid {
+    /* MENGGUNAKAN GRID TIGA KOLOM UNTUK KONSISTENSI */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3-4 kolom di desktop */
+    gap: 15px; /* Jarak antar kotak foto */
+    margin: 2rem auto;
+    width: 90%; 
+}
+
+/* CONTAINER BARU UNTUK SETIAP FOTO */
+.photo-item {
+    /* MEMAKSA KOTAK FOTO MENJADI PERSEGI PANJANG (4:3) */
+    height: 0;
+    padding-bottom: 75%; /* Rasio 4:3 (75% dari lebar) */
+    position: relative;
+    overflow: hidden; /* Memastikan gambar yang meluber terpotong */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.photo-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #FF4500; 
+}
+
+/* GAMBAR DI DALAM CONTAINER */
+.clickable-photo {
+    /* MEMAKSA GAMBAR MEMENUHI KOTAK PERSEGI PANJANG */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Kunci: Memotong gambar agar memenuhi kotak tanpa distorsi */
+    border-radius: 8px; 
+}
+
+
+/* --- TABEL JADWAL --- */
+table {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #FF4500; 
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* --- FOOTER (Kontak) --- */
+footer {
+    background: #154332; 
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #FF4500;
+}
+
+/* --- MODAL (POP-UP FOTO) --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #FF4500; 
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVITAS --- */
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+    nav ul { flex-direction: column; padding-top: 1rem; }
+    .container { width: 95%; }
+    .member-grid { gap: 10px; }
+    .modal-content { width: 95%; }
+    .member-card { min-width: unset; width: 100%; } 
+}
