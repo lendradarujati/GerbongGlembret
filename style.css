@@ -191,12 +191,20 @@ h2 {
 
 
 /* --- TABEL JADWAL --- */
+
+
+.table-scroll {
+    overflow-x: auto; 
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
 table {
     width: 100%;
+    min-width: 700px; 
     margin: 30px auto;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
 }
 
 table th, table td {
@@ -292,4 +300,39 @@ footer {
     .member-grid { gap: 10px; }
     .modal-content { width: 95%; }
     .member-card { min-width: unset; width: 100%; } 
+
+}
+
+/* --- RESPONSIVITAS --- */
+@media (max-width: 768px) {
+    
+    /* PERBAIKAN HEADER */
+    header {
+        /* Mengembalikan ke posisi menyamping (awal) */
+        flex-direction: row; 
+        justify-content: space-between; 
+        padding: 0.5rem 1rem; /* Padding lebih kecil */
+    }
+
+    .header-logo {
+        /* Ukuran logo di HP dibuat lebih kecil agar header tidak terlalu tebal */
+        height: 50px; 
+        margin-top: -15px; 
+        margin-bottom: -15px;
+    }
+    
+    nav {
+        /* Navigasi disembunyikan atau diubah, tapi karena Anda ingin menyamping,
+           kita biarkan tampil menyamping, tapi disarankan disembunyikan.
+           Jika Anda ingin nav menyamping: */
+        display: none; /* Sembunyikan Navigasi agar header lebih kecil dan rapi. Anda bisa ganti ini dengan tombol menu burger jika mau */
+    }
+    
+    /* Konten lain... */
+    .container { width: 95%; }
+    .member-grid { gap: 10px; }
+    .modal-content { width: 95%; }
+    .member-card { min-width: unset; width: 100%; } 
+    
+    /* Hapus flex-direction: column; dari header lama jika ada di media query */
 }
