@@ -315,9 +315,9 @@ footer {
     }
 
     .header-logo {
-        height: 100px; /* Logo lebih kecil di HP */
-        margin-top: -30px; 
-        margin-bottom: -30px;
+        height: 130px; /* Logo lebih kecil di HP */
+        margin-top: -60px; 
+        margin-bottom: -60px;
     }
     
     .burger-menu {
@@ -364,4 +364,5 @@ footer {
     .member-grid { gap: 10px; }
     .modal-content { width: 95%; }
     .member-card { min-width: unset; width: 100%; } 
+
 }
