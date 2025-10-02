@@ -52,6 +52,11 @@ header {
     margin-bottom: -70px;
 }
 
+nav {
+    /* Pastikan navigasi default desktop tetap menyamping */
+    display: block; 
+}
+
 nav ul { 
     list-style: none; 
     display: flex; 
@@ -209,7 +214,7 @@ h2 {
 
 table {
     width: 100%;
-    min-width: 700px; /* Minimal lebar agar bisa di-scroll di HP */
+    min-width: 700px; 
     margin: 30px auto;
     border-collapse: collapse;
 }
@@ -309,4 +314,54 @@ footer {
         padding: 0.5rem 1rem; 
     }
 
-    .header-
+    .header-logo {
+        height: 50px; /* Logo lebih kecil di HP */
+        margin-top: -15px; 
+        margin-bottom: -15px;
+    }
+    
+    .burger-menu {
+        display: flex; /* Tampilkan burger menu di HP */
+    }
+    
+    /* MENU NAVIGASI (OVERLAY) */
+    #nav-menu {
+        display: none; /* Sembunyikan default */
+        flex-direction: column;
+        background: #34495E;
+        position: fixed; /* Fixed agar menutupi seluruh layar */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; 
+        padding-top: 80px; 
+        z-index: 999; /* Di bawah burger, di atas konten */
+        transition: transform 0.3s ease-in-out;
+        /* Hapus transform: translateX(100%); di CSS default agar tidak konflik */
+    }
+    
+    #nav-menu.active {
+        display: flex; /* Tampilkan saat class 'active' ditambahkan oleh JS */
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    
+    #nav-menu ul li {
+        margin: 15px 0;
+    }
+    
+    #nav-menu ul li a {
+        padding: 1rem 0;
+        font-size: 1.2rem;
+    }
+
+    /* KODE RESPONSIVITAS LAINNYA */
+    .container { width: 95%; }
+    .member-grid { gap: 10px; }
+    .modal-content { width: 95%; }
+    .member-card { min-width: unset; width: 100%; } 
+}
