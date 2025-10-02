@@ -28,10 +28,8 @@ body {
 header {
     background: #34495E;
     color: #fff;
-    /* PADDING RAMPING */
     padding: 0.1rem 2rem; 
     
-    /* POSISI KIRI-KANAN */
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -46,12 +44,10 @@ header {
 }
 
 .header-logo {
-    /* UKURAN LOGO BESAR 130px */
     height: 150px; 
     width: auto;
     display: block;
     
-    /* MARGIN NEGATIF UNTUK MEMASUKKAN LOGO BESAR KE HEADER RAMPING */
     margin-top: -70px; 
     margin-bottom: -70px;
 }
@@ -71,6 +67,25 @@ nav ul li a {
 }
 
 nav ul li a:hover { background: #4a667f; }
+
+/* --- CSS UNTUK TOMBOL BURGER (DEFAULT TERSEMBUNYI) --- */
+.burger-menu {
+    display: none; /* Sembunyikan di desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+.burger-menu div {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
 
 /* --- SEKSI UMUM & CONTAINER --- */
 .container {
@@ -134,7 +149,7 @@ h2 {
     width: 100px;
     height: 100px;
     display: block;
-    border-radius: 50%; /* FOTO PROFIL BULAT */
+    border-radius: 50%; 
     object-fit: cover;
     margin-bottom: 15px;
     border: 3px solid #FF4500;
@@ -152,21 +167,18 @@ h2 {
 .dark-bg { background: #ecf0f1; }
 
 .gallery-grid {
-    /* MENGGUNAKAN GRID TIGA KOLOM UNTUK KONSISTENSI */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3-4 kolom di desktop */
-    gap: 15px; /* Jarak antar kotak foto */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 15px; 
     margin: 2rem auto;
     width: 90%; 
 }
 
-/* CONTAINER BARU UNTUK SETIAP FOTO */
 .photo-item {
-    /* MEMAKSA KOTAK FOTO MENJADI PERSEGI PANJANG (4:3) */
     height: 0;
-    padding-bottom: 75%; /* Rasio 4:3 (75% dari lebar) */
+    padding-bottom: 75%; 
     position: relative;
-    overflow: hidden; /* Memastikan gambar yang meluber terpotong */
+    overflow: hidden; 
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -177,22 +189,18 @@ h2 {
     box-shadow: 0 0 20px #FF4500; 
 }
 
-/* GAMBAR DI DALAM CONTAINER */
 .clickable-photo {
-    /* MEMAKSA GAMBAR MEMENUHI KOTAK PERSEGI PANJANG */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Kunci: Memotong gambar agar memenuhi kotak tanpa distorsi */
+    object-fit: cover; 
     border-radius: 8px; 
 }
 
 
 /* --- TABEL JADWAL --- */
-
-
 .table-scroll {
     overflow-x: auto; 
     width: 100%;
@@ -201,10 +209,9 @@ h2 {
 
 table {
     width: 100%;
-    min-width: 700px; 
+    min-width: 700px; /* Minimal lebar agar bisa di-scroll di HP */
     margin: 30px auto;
     border-collapse: collapse;
-
 }
 
 table th, table td {
@@ -292,47 +299,14 @@ footer {
     cursor: pointer;
 }
 
-/* --- RESPONSIVITAS --- */
-@media (max-width: 768px) {
-    header { flex-direction: column; }
-    nav ul { flex-direction: column; padding-top: 1rem; }
-    .container { width: 95%; }
-    .member-grid { gap: 10px; }
-    .modal-content { width: 95%; }
-    .member-card { min-width: unset; width: 100%; } 
-
-}
-
-/* --- RESPONSIVITAS --- */
+/* --- MEDIA QUERY UNTUK LAYAR KECIL (MOBILE) --- */
 @media (max-width: 768px) {
     
-    /* PERBAIKAN HEADER */
+    /* HEADER MOBILE: RAMPING DAN MENYAMPING */
     header {
-        /* Mengembalikan ke posisi menyamping (awal) */
         flex-direction: row; 
         justify-content: space-between; 
-        padding: 0.5rem 1rem; /* Padding lebih kecil */
+        padding: 0.5rem 1rem; 
     }
 
-    .header-logo {
-        /* Ukuran logo di HP dibuat lebih kecil agar header tidak terlalu tebal */
-        height: 50px; 
-        margin-top: -15px; 
-        margin-bottom: -15px;
-    }
-    
-    nav {
-        /* Navigasi disembunyikan atau diubah, tapi karena Anda ingin menyamping,
-           kita biarkan tampil menyamping, tapi disarankan disembunyikan.
-           Jika Anda ingin nav menyamping: */
-        display: none; /* Sembunyikan Navigasi agar header lebih kecil dan rapi. Anda bisa ganti ini dengan tombol menu burger jika mau */
-    }
-    
-    /* Konten lain... */
-    .container { width: 95%; }
-    .member-grid { gap: 10px; }
-    .modal-content { width: 95%; }
-    .member-card { min-width: unset; width: 100%; } 
-    
-    /* Hapus flex-direction: column; dari header lama jika ada di media query */
-}
+    .header-
