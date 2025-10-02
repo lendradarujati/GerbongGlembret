@@ -366,15 +366,24 @@
             }
         }
         
-        // JAVASCRIPT BARU UNTUK BURGER MENU
+        // JAVASCRIPT UNTUK BURGER MENU
         const burger = document.getElementById('burger');
         const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('#nav-menu a'); // Ambil semua link di menu
 
         if (burger && navMenu) {
             burger.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
             });
         }
+
+        // KODE BARU: Tutup menu saat link diklik
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Hapus class 'active' dari menu untuk menutupnya
+                navMenu.classList.remove('active');
+            });
+        });
     </script>
 
 </body>
